@@ -1,0 +1,10 @@
+export {default as Cam} from "./Cam";
+export {default as CamNone} from "./CamNone";
+export {default as Chat} from "./Chat";
+export {default as Computer} from "./Computer";
+export {default as ComputerNone} from "./ComputerNone";
+export {default as Logo} from "./Logo";
+export {default as Mic} from "./Mic";
+export {default as MicNone} from "./MicNone";
+export {default as Phone} from "./Phone";
+export {default as Send} from "./Send";
