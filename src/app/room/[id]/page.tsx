@@ -5,6 +5,7 @@ import Header from '@/components/Header';
 import { SocketContext } from '@/contexts/SocketContext';
 import { useRouter } from 'next/navigation';
 import { useContext, useEffect, useRef, useState } from 'react';
+import NoMic from "@/Icons/NoMic";
 interface IAnswer {
     sender: string;
     description: RTCSessionDescriptionInit;
@@ -214,7 +215,6 @@ export default function Room({ params }: { params: { id: string } }) {
         });
         return video;
     };
-
     return (<div className="h-screen">
             <Header />
             <div className="flex h-[80%] ">
@@ -231,9 +231,10 @@ export default function Room({ params }: { params: { id: string } }) {
               </span>
                         </div>
                         {remoteStreams.map((stream, index) => {
+
                             return (
                                 <div
-                                    className="bg-gray-950 w-full rounded-md h-full p-2 relative "
+                                    className="bg-gray-950 w-full rounded-md h-full relative "
                                     key={index}
                                 >
                                     <video

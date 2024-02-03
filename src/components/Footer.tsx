@@ -32,8 +32,9 @@ export default function Footer({
 
     const toggleMuted = () => {
         videoMediaStream?.getAudioTracks().forEach((track) => {
-            track.enabled = !isMuted;
+            track.enabled = !track.enabled;
         });
+
         setIsMuted(!isMuted);
 
         Object.values(peerConnections.current).forEach((peerConnection) => {
